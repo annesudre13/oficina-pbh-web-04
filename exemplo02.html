@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 16px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .entrada {
+            width: 40rem;
+            margin: 2rem auto;
+        }
+        input {
+            padding: .3rem;
+            text-align: right;
+        }
+        button {
+            padding: .45rem 1rem;
+            background-color: cadetblue;
+            color:aliceblue;
+            border: none;
+        }
+        .resposta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 40rem;
+            min-height: 25rem;
+            margin: 2rem auto;
+            border: 1px solid #a3a0a0;
+            box-shadow: 0.5rem .5rem .3rem 0.1rem #a3a0a0;
+        }
+        .item {
+            text-align: center;
+            background-color: cadetblue;
+            color: aliceblue;
+            font-weight: bold;
+            display: flex;
+            width: 15rem;
+            height: 5rem;
+            margin: 1rem auto;
+            padding: 1rem;
+            border: 1px solid #a3a0a0;
+            box-shadow: 0.5rem .5rem .3rem 0.1rem #a3a0a0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Número: <input type="number" id="numero" class="entrada">
+        <button onclick="processar()">OK</button>
+        <div id="resp" class="resposta">
+        </div>
+    </div>
+    <script>
+        /*
+        Estrutura de repetição: while.
+        Entrada/saída de dados.
+        Variável.
+        */
+
+        function processar(){
+        var i = 0, num = parseInt (document.getElementById("numero").value);
+
+        while(i <= num) {
+            document.getElementById("resp").innerHTML += `<div class="item">${i}</div>`;
+            i++;
+        }
+    }
+    </script>
+</body>
+</html>
